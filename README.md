@@ -15,4 +15,4 @@ Curso de Sistemas e Mídias Digitais da Universidade Federal do Ceará.
 
 **Descrição da atividade:**
 
-> Desenvolvimento de uma aplicação web usando Node.js para uma loja de dispositivos tecnológicos.
+> Desenvolvimento de uma aplicação web do tipo loja virtual, usando Node.js, que tem como finalidade o cadastro de material de TI para venda.
