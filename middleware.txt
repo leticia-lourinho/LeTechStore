@@ -1,0 +1,23 @@
+// Middleware para verificar o token e proteger as rotas (caminhos)
+function verificarToken(req, _, next) {
+    const token = req.headers.authorization?.split(" ")[1] || req.query.token; // Obtém o token do cabeçalho Authorization ou da query
+
+    if (!token) {
+        req.isAuthenticated = false;
+        req.token = null;
+        return next(); // Continua sem autenticação
+    }
+
+    auth.verifyIdToken(token)
+        .then((decodedToken) => {
+            req.user = decodedToken;
+            req.isAuthenticated = true;
+            req.token = token;
+            next();
+        })
+        .catch(() => {
+            req.isAuthenticated = false;
+            req.token = null;
+            next();
+        });
+}
