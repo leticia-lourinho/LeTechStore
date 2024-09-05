@@ -9,6 +9,7 @@ app.set("views", "./views"); //Define o local onde estão as minhas páginas din
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+//mudei irraaaa
 
 <<<<<<< HEAD
 // Lista de usuários
